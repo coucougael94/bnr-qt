@@ -1086,30 +1086,6 @@
          <item row="2" column="1">
           <widget class="QLineEdit" name="message"/>
          </item>
-         <item row="4" column="0">
-          <layout class="QFormLayout" name="formLayout">
-           <item row="3" column="0">
-            <widget class="QCommandLinkButton" name="pleinecran">
-             <property name="minimumSize">
-              <size>
-               <width>174</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Plein Ecran</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QCommandLinkButton" name="sortirpleinecran">
-             <property name="text">
-              <string>Sortir du plein ecran</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
          <item row="2" column="2">
           <widget class="QPushButton" name="boutonEnvoyer">
            <property name="text">
@@ -1347,6 +1323,43 @@
             <enum>Qt::Horizontal</enum>
            </property>
           </widget>
+         </item>
+         <item row="4" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="QCommandLinkButton" name="pleinecran">
+             <property name="minimumSize">
+              <size>
+               <width>174</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Plein Ecran</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCommandLinkButton" name="sortirpleinecran">
+             <property name="text">
+              <string>Sortir du plein ecran</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
          </item>
         </layout>
        </item>

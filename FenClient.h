@@ -22,10 +22,6 @@ class FenClient : public QWidget, private Ui::FenClient
         void on_boutonNettoyer_clicked();
         void on_jeu_clicked();
         void on_pushButton_bug_clicked();
-        /** Brief \ Permet d'envoyer un message "specimen" pour dépiler la pile
-          * Param \
-          * Return \ void
-          */
 
         void donneesRecues();
         void connecte();
@@ -35,17 +31,31 @@ class FenClient : public QWidget, private Ui::FenClient
         void boutonDefenseClicked(int indexCase);
 
 private:
+        /*
+        * Décrypte / interprète une donnée reçu
+        */
         void decrypte(const QString &messageRecu);
+
+        /*
+        * Envoie des données mais, a la différence de on_boutonEnvoyer_clicked(),
+        * les données sont envoyés sans l'ajout du pseudo au début de la chaine.
+        */
         void envoie(const QString &messageCache);
+
+        /*
+        * Converti 53 en F5 par exemple
+        */
         QString convertiNUMcaseVersNomCase(int numDeCase);
 
         QTcpSocket *socket; // Représente le serveur
         quint16 tailleMessage;
+
         QChar m_aMoiDeJouer;
         ///r :rien (default)
         ///a :je t'attend
         ///n :non terminé
         ///t :l'autre a terminée .le jeu commence
+
         QList<QPushButton*> boutonAttaque;
         QList<QPushButton*> boutonDefense;
 };

@@ -237,13 +237,13 @@ void FenClient::decrypte(const QString &messageRecu)
 {
     /** SCRIPT:
      * Attaque:
-     * $A57$
-     * (57= au numéro de la case, 57 n'est qu'un exemple)
+     * $A42$
+     * (42= au numéro de la case, 42 n'est qu'un exemple)
      *
      * Defense:
-     * $DT57$ //l'adversaire est touché a la case 57.
-     * $DR57$ //l'adversaire n'a rien en 57
-     * $DE57$ //Une Erreur la case 57 a déja été torpillé.
+     * $DT42$ //l'adversaire est touché a la case 42.
+     * $DR42$ //l'adversaire n'a rien en 42
+     * $DE42$ //Une Erreur la case 42 a déja été torpillé.
      */
     for(int index=0;index < messageRecu.size()-1;index++)
     {
