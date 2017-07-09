@@ -344,6 +344,10 @@ QString FenClient::convertiNUMcaseVersNomCase(int numDeCase)
 {
     if(numDeCase >= 82)
         numDeCase -= 81;
+    // /!\ Jamais testé
+        QString case = "ABCDEFGHI";
+        return case[numDeCase%9] + numDeCase/9;
+    /*
     switch(numDeCase){
         case 0:
             return "Erreur";
@@ -595,5 +599,5 @@ QString FenClient::convertiNUMcaseVersNomCase(int numDeCase)
             QMessageBox::information(this, tr("Erreur"), tr("Contacter le meneur du jeu #defaultNUmversnomcase:")+QString::number(numDeCase));
             return "I9REG";
             break;
-    }
+    }*/
 }
